@@ -10,4 +10,3 @@ public class CarMPGEntry {
 	public int	origin;
 	public String carName;
 }
-
