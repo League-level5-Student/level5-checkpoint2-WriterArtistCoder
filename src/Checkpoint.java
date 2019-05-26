@@ -32,7 +32,7 @@ public class Checkpoint {
 
 		ArrayList<CarMPGEntry> codyIKnowWhatYouDid = readCarMPGEntryDataFromFile();
 		Stream<CarMPGEntry> str = codyIKnowWhatYouDid.stream();
-		
+
 		// TRIAL ONE
 		System.out.println("TRIAL ONE:");
 		try {
@@ -40,9 +40,9 @@ public class Checkpoint {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
-		// .filter((CarMPGEntry c)->(boolean that fits CarMPGEntries you want)).forEach((CarMPGEntry c)->(do this with c));
-		str.filter((CarMPGEntry c)->true).forEach((CarMPGEntry c)->System.out.println(c.carName));		
+
+		str.filter((CarMPGEntry c) -> true).forEach((CarMPGEntry c) -> System.out.println(c.carName));
+
 		// TRIAL TWO
 		System.out.println("TRIAL TWO:");
 		try {
@@ -50,6 +50,18 @@ public class Checkpoint {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		str.filter((CarMPGEntry c) -> true).forEach((CarMPGEntry c) -> System.out.println(c.mpg));
+		
+		// TRIAL THREE
+		System.out.println("TRIAL THREE:");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		str.filter((CarMPGEntry c) -> true).forEach((CarMPGEntry c) -> System.out.println(c.carName));
+		
+		
 	}
 
 	public static ArrayList<CarMPGEntry> readCarMPGEntryDataFromFile() {
